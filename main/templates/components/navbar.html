@@ -1,10 +1,8 @@
+{% load static %}
 <header class="text-gray-600 body-font">
 <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-    </svg>
-    <span class="ml-3 text-xl">Aadil Sehrawat</span>
+    <a href="{% url 'home' %}" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+    <img src="{% static 'images/logo.png' %}" alt="logo" class="h-10" />
     </a>
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
     <a href="{% url 'home' %}" class="mr-5 hover:text-gray-900 nav-link">Home</a>
@@ -13,7 +11,7 @@
     <a href="{% url 'services' %}" class="mr-5 hover:text-gray-900 nav-link">Services</a>
     <a href="{% url 'socials' %}" class="mr-5 hover:text-gray-900 nav-link">Socials</a>
     </nav>
-    <button class="inline-flex items-center bg-gray-500 border-0 py-1 px-3 focus:outline-none hover:bg-black rounded text-base mt-4 md:mt-0"><a href="{% url 'contact' %}" style='color:white'>Contact Me</a>
+    <button class="inline-flex items-center bg-black border-0 py-1 px-3 focus:outline-none hover:bg-white rounded text-base mt-4 md:mt-0 contact-link"><a href="{% url 'contact' %}">Contact Me</a>
     <svg fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
         <path d="M5 12h14M12 5l7 7-7 7"></path>
     </svg>
