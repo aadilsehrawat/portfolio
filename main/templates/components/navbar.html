@@ -7,12 +7,12 @@
     <span class="ml-3 text-xl">Aadil Sehrawat</span>
     </a>
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-    <a class="mr-5 hover:text-gray-900 nav-link">Home</a>
-    <a class="mr-5 hover:text-gray-900 nav-link">About</a>
-    <a class="mr-5 hover:text-gray-900 nav-link">Projects</a>
-    <a class="mr-5 hover:text-gray-900 nav-link">Services</a>
+    <a href="{% url 'home' %}" class="mr-5 hover:text-gray-900 nav-link">Home</a>
+    <a href="{% url 'about' %}" class="mr-5 hover:text-gray-900 nav-link">About</a>
+    <a href="{% url 'projects' %}" class="mr-5 hover:text-gray-900 nav-link">Projects</a>
+    <a href="{% url 'services' %}" class="mr-5 hover:text-gray-900 nav-link">Services</a>
     </nav>
-    <button class="inline-flex items-center bg-gray-500 border-0 py-1 px-3 focus:outline-none hover:bg-black rounded text-base mt-4 md:mt-0"><span style='color:white'>Contact Me</span>
+    <button class="inline-flex items-center bg-gray-500 border-0 py-1 px-3 focus:outline-none hover:bg-black rounded text-base mt-4 md:mt-0"><a href="{% url 'contact' %}" style='color:white'>Contact Me</a>
     <svg fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
         <path d="M5 12h14M12 5l7 7-7 7"></path>
     </svg>
