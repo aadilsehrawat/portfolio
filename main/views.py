@@ -13,3 +13,5 @@ def services(request):
     return render(request, 'main/services.html')
 def contact(request):
     return render(request, 'main/contact.html')
+def socials(request):
+    return render(request, 'main/socials.html')
