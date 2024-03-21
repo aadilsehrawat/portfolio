@@ -5,15 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock title %} | Aadil</title>
     {% block styles %}{% endblock styles %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        {% comment %} STRUCTURE {% endcomment %}
+        #header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background-color: #f1f1f1;
+        }
+        #content {
+            padding: 10px;
+        }
+        #footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #f1f1f1;
+        }
+
+        {% comment %} NAVBAR {% endcomment %}
+        .nav-link {
+            font-weight: 500;
+            transition: transform 0.1s ease;
+            cursor: pointer;
+            padding: 0 10px;
+        }
+    
+        .nav-link:hover {
+            transform: scale(1.1);
+        }
+
+        {% comment %} FOOTER {% endcomment %}
+        .footer-link {
+            transition: transform 0.1s ease;
+            cursor: pointer;
+            padding: 0 10px;
+            transform: scale(1.1);
+        }
+        .footer-link:hover {
+            transform: scale(1.3);
+        }
+    </style>
 </head>
 <body>
-    <div>
+    <section id='header'>
         {% include "components/header.html" %}
-        <div>
-            {% block body %}{% endblock body %}
-        </div>
+    </section>
+    
+    <section id='content'>    
+        {% block body %}{% endblock body %}
+    </section>
+    
+    <section id='footer'>
         {% include "components/footer.html" %}
-    </div>
+    </section>
     {% block scripts %}{% endblock scripts %}
 </body>
 </html>
