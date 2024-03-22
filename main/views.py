@@ -13,8 +13,12 @@ def workX(request):
     return render(request, 'main/career/workX.html', {'active_tab': 'career'})
 def about(request):
     return render(request, 'main/about.html', {'active_tab': 'about'})
+def skills_and_projects(request):
+    return redirect('projects')
+def skills(request):
+    return render(request, 'main/skills-and-projects/skills.html', {'active_tab': 'skills-projects'})
 def projects(request):
-    return render(request, 'main/projects.html', {'active_tab': 'projects'})
+    return render(request, 'main/skills-and-projects/projects.html', {'active_tab': 'skills-projects'})
 def services(request):
     return render(request, 'main/services.html', {'active_tab': 'services'})
 def contact(request):
