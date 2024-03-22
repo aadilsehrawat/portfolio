@@ -2,8 +2,21 @@
 
 {% block title %}Home{% endblock title %}
 
+{% block styles %}
+    <style>
+        .heading1{
+            font-family: sans-serif;
+            margin-top: 10px;
+            color: #2b9900;
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+        }
+    </style>
+{% endblock styles %}
+
 {% block body %}
-    <h1 class='heading1' style='text-center'>Building Innovative Solutions for a better tomorrow, through Technology</h1>
+    <h1 class='heading1' style='text-center'>Building Innovative Solutions throuh Technology for a better tomorrow.</h1>
     {% include "main/home-about.html" %}
     {% include "main/home-projects.html" %}
     {% include "main/home-services.html" %}
