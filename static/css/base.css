@@ -4,19 +4,16 @@
     left: 0;
     top: 0;
     width: 100%;
-    background-color: #f1f1f1;
-    z-index: 1000;
+    background-color: white;
+    z-index: 100;
 }
 #content {
     padding: 10px;
 }
 #footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    background-color: #f1f1f1;
-    z-index: 1000;
+    background-color: white;
+    z-index: 100;
 }
 
 
