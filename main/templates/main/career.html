@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Project{% endblock title %}
+
+{% block styles %}<link rel="stylesheet" href="{% static 'css/career.css' %}">{% endblock styles %}
+
+{% block body %}
+<p class="heading1">My Work Experiences</p>
+    <div class="timeline">
+        <div class="company-container left-container">
+            <img class="company-logo" src="{% static 'images/company-logos/tjr.png' %}" />
+            <div class="text-box">
+                <div class="company-name">
+                    <h2>TJR - The Jamia Review</h2>
+                    <a href="https://www.thejamiareview.com/" target="_blank"><img class="link-logo" src="{% static 'images/attributes/link.png' %}" /></a>
+                </div>
+                <small>November 2021 - January 2023</small>
+                <p class="job-title">Web Development Associate</p>
+                <p>Job Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Maiores laborum quaerat asperiores exercitationem, a ad sapiente natus tenetur, ab modi sunt ipsum cum alias omnis voluptas nobis? 
+                    Doloribus, ipsa possimus.</p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="company-container right-container">
+            <img class="company-logo" src="{% static 'images/company-logos/prospeer.png' %}" />
+            <div class="text-box">
+                <div class="company-name">
+                    <h2>Prospeer</h2>
+                    <a href="https://www.prospeer.ai/" target="_blank"><img class="link-logo" src="{% static 'images/attributes/link.png' %}" /></a>
+                </div>
+                <small>June 2022 - July 2023</small>
+                <p class="job-title">Full Stack Developer</p>
+                <p>Job Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Maiores laborum quaerat asperiores exercitationem, a ad sapiente natus tenetur, ab modi sunt ipsum cum alias omnis voluptas nobis? 
+                    Doloribus, ipsa possimus.</p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="company-container left-container">
+            <img class="company-logo" src="{% static 'images/company-logos/shell.png' %}" />
+            <div class="text-box">
+                <div class="company-name">
+                    <h2>Shell India</h2>
+                    <a href="https://www.shell.in/" target="_blank"><img class="link-logo" src="{% static 'images/attributes/link.png' %}" /></a>
+                </div>
+                <small>August 2023 - February 2024</small>
+                <p class="job-title">Associate Data Engineer</p>
+                <p>Job Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Maiores laborum quaerat asperiores exercitationem, a ad sapiente natus tenetur, ab modi sunt ipsum cum alias omnis voluptas nobis? 
+                    Doloribus, ipsa possimus.</p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="company-container right-container">
+            <img class="company-logo" src="{% static 'images/company-logos/prospeer.png' %}" />
+            <div class="text-box">
+                <div class="company-name">
+                    <h2>Prospeer AI</h2>
+                    <a href="https://www.prospeer.ai/" target="_blank"><img class="link-logo" src="{% static 'images/attributes/link.png' %}" /></a>
+                </div>
+                <small>March 2024 - Present</small>
+                <p class="job-title">Software Development Engineer - I (SDE1)</p>
+                <p>Job Description - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Maiores laborum quaerat asperiores exercitationem, a ad sapiente natus tenetur, ab modi sunt ipsum cum alias omnis voluptas nobis? 
+                    Doloribus, ipsa possimus.</p>
+                <span class="right-container-arrow"></span>    
+            </div>
+        </div>
+
+    </div>
+{% endblock body %}
