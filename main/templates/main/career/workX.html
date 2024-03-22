@@ -6,10 +6,14 @@
 {% block styles %}<link rel="stylesheet" href="{% static 'css/education-and-workX.css' %}">{% endblock styles %}
 
 {% block body %}
+<div class="toggle-container">
+    <button class="toggle-button" id="educationButton" onclick="redirectToURL('{% url 'education' %}')">Education</button>
+    <button class="toggle-button active-button" id="careerButton">Experience</button>
+</div>
 <p class="heading1">My Work Experiences</p>
 <div class="timeline">
     {% comment %} First Card {% endcomment %}
-    <div class="institute-company-container right-container">
+    <div class="institute-company-container left-container">
         <a href="https://www.prospeer.ai/" target="_blank"><img class="institute-company-logo" src="{% static 'images/career/company-logos/prospeer.png' %}" /></a>
         <div class="text-box">
             <div class="institute-company-name">
@@ -26,11 +30,11 @@
             <hr class="mt-2 mb-2">
             <p class="inner-heading">Top Skills Used:</p>
             <p>Python, PostgreSQL, AWS Apache Airflow, Azure Databricks</p>
-            <span class="right-container-arrow"></span>    
+            <span class="left-container-arrow"></span>    
         </div>
     </div>
     {% comment %} Second Card {% endcomment %}
-    <div class="institute-company-container left-container">
+    <div class="institute-company-container right-container">
         <a href="https://www.shell.in/" target="_blank"><img class="institute-company-logo" src="{% static 'images/career/company-logos/shell.png' %}" /></a>
         <div class="text-box">
             <div class="institute-company-name">
@@ -48,11 +52,11 @@
             <hr class="mt-2 mb-2">
             <p class="inner-heading">Top Skills Used:</p>
             <p>Python, PostgreSQL, AWS Apache Airflow, Azure Databricks</p>
-            <span class="left-container-arrow"></span>
+            <span class="right-container-arrow"></span>
         </div>
     </div>
     {% comment %} Third Card {% endcomment %}
-    <div class="institute-company-container right-container">
+    <div class="institute-company-container left-container">
         <a href="https://www.prospeer.ai/" target="_blank"><img class="institute-company-logo" src="{% static 'images/career/company-logos/prospeer.png' %}" /></a>
         <div class="text-box">
             <div class="institute-company-name">
@@ -72,11 +76,11 @@
             <hr class="mt-2 mb-2">
             <p class="inner-heading">Top Skills Used:</p>
             <p>Python, Django, PostgreSQL, Docker, Github, AWS, Bubble.io</p>
-            <span class="right-container-arrow"></span>
+            <span class="left-container-arrow"></span>
         </div>
     </div>
     {% comment %} Fourth Card {% endcomment %}
-    <div class="institute-company-container left-container">
+    <div class="institute-company-container right-container">
         <a href="https://www.thejamiareview.com/" target="_blank"><img class="institute-company-logo" src="{% static 'images/career/company-logos/tjr.png' %}" /></a>
         <div class="text-box">
             <div class="institute-company-name">
@@ -95,8 +99,10 @@
             <hr class="mt-2 mb-2">
             <p class="inner-heading">Top Skills Used:</p>
             <p>WordPres, Figma</p>
-            <span class="left-container-arrow"></span>
+            <span class="right-container-arrow"></span>
         </div>
     </div>
 </div>
+
+<script src="{% static '/js/education-and-workX.js' %}"></script> 
 {% endblock body %}

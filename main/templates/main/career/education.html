@@ -6,6 +6,10 @@
 {% block styles %}<link rel="stylesheet" href="{% static 'css/education-and-workX.css' %}">{% endblock styles %}
 
 {% block body %}
+<div class="toggle-container">
+    <button class="toggle-button active-button" id="educationButton">Education</button>
+    <button class="toggle-button" id="careerButton" onclick="redirectToURL('{% url 'workX' %}')">Experience</button>
+</div>
 <p class="heading1">My Educational History</p>
 <div class="timeline">
     {% comment %} First Card {% endcomment %}
@@ -17,7 +21,7 @@
                 <a href="https://amity.edu/" target="_blank"><img class="link-logo" src="{% static 'images/attributes/link.png' %}" /></a>
             </div>
             <small>2019 - 2023</small>
-            <p class="inner-heading">B.Tech (Computer Science & Engineering)</p>
+            <p class="inner-heading">Bachelor of Technology (Computer Science & Engineering)</p>
             <p>Courses/Subjects:</p>
             <ul class="ml-5 tasks">
                 <li>DSA (Data Structures and Algorithms)</li>
@@ -40,7 +44,7 @@
                 <a href="https://www.ngfsalaknanda.com/" target="_blank"><img class="link-logo" src="{% static 'images/attributes/link.png' %}" /></a>
             </div>
             <small>2018 - 2016</small>
-            <p class="inner-heading">12th Grade</p>
+            <p class="inner-heading">12th Grade (Senior School)</p>
             <p>Courses/Subjects:</p>
             <ul class="ml-5 tasks">
                 <li>Computer Science.</li>
@@ -58,7 +62,7 @@
                 <a href="https://golayaschool.org/" target="_blank"><img class="link-logo" src="{% static 'images/attributes/link.png' %}" /></a>
             </div>
             <small>2014-2016</small>
-            <p class="inner-heading">Full Stack Developer</p>
+            <p class="inner-heading">10th Grade (Matriculation)</p>
             <p>Courses/Subjects:</p>
             <ul class="ml-5 tasks">
                 <li>Mathematics.</li>
@@ -69,4 +73,6 @@
         </div>
     </div>
 </div>
+
+<script src="{% static '/js/education-and-workX.js' %}"></script> 
 {% endblock body %}
