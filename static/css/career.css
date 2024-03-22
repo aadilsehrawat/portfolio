@@ -14,14 +14,14 @@ body{
     max-width: 1200px;
     margin: 50px auto 100px auto;
 }
-.company-container{
+.institute-company-container{
     padding: 10px 50px;
     position: relative;
     width: 50%;
     animation: movedown 1s ease-out forwards;
     opacity: 0;
 }
-.company-name{
+.institute-company-name{
     display: flex;
 }
 .link-logo{
@@ -38,22 +38,22 @@ body{
         transform: translateY(0);
     }
 }
-.company-container:nth-child(1){
+.institute-company-container:nth-child(1){
     animation-delay: 0.5s;
 }
-.company-container:nth-child(2){
+.institute-company-container:nth-child(2){
     animation-delay: 1.5s;
 }
-.company-container:nth-child(3){
+.institute-company-container:nth-child(3){
     animation-delay: 2.5s;
 }
-.company-container:nth-child(4){
+.institute-company-container:nth-child(4){
     animation-delay: 3.5s;
 }
-.company-container:nth-child(5){
+.institute-company-container:nth-child(5){
     animation-delay: 4.5s;
 }
-.company-container:nth-child(6){
+.institute-company-container:nth-child(6){
     animation-delay: 5.5s;
 }
 .text-box{
@@ -70,7 +70,7 @@ body{
 .right-container{
     left: 50%;
 }
-.company-container .company-logo{
+.institute-company-container .institute-company-logo{
     background: white;
     position: absolute;
     width: 40px;
@@ -79,7 +79,7 @@ body{
     top: 32px;
     z-index: 10;
 }
-.right-container .company-logo{
+.right-container .institute-company-logo{
     left: -20px;
 }
 .timeline::after{
@@ -145,7 +145,7 @@ body{
     .timeline::after{
         left: 31px;
     }
-    .company-container{
+    .institute-company-container{
         width: 100%;
         padding-left: 80px;
         padding-right: 25px;
