@@ -6,7 +6,11 @@ def index(request):
 def home(request):
     return render(request, 'main/home.html', {'active_tab': 'home'})
 def career(request):
-    return render(request, 'main/career.html', {'active_tab': 'career'})
+    return redirect('workX')
+def education(request):
+    return render(request, 'main/career/education.html', {'active_tab': 'career'})
+def workX(request):
+    return render(request, 'main/career/workX.html', {'active_tab': 'career'})
 def about(request):
     return render(request, 'main/about.html', {'active_tab': 'about'})
 def projects(request):
