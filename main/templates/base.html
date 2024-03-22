@@ -24,13 +24,6 @@
     </section>
     {% block scripts %}{% endblock scripts %}
 
-    <script>
-        window.onload = function() {
-            var headerHeight = document.getElementById('header').offsetHeight;
-            var footerHeight = document.getElementById('footer').offsetHeight;
-            document.querySelector('#content').style.marginTop = headerHeight + 'px';
-            document.querySelector('#content').style.marginBottom = footerHeight + 'px';
-        };
-    </script>
+    <script src="{% static '/js/base.js' %}"></script>
 </body>
 </html>
