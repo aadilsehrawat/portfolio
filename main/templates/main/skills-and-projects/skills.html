@@ -1,8 +1,17 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Skills{% endblock title %}
 
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/education-and-workX.css' %}">
+<link rel="stylesheet" href="{% static 'css/toggle.css' %}">
+{% endblock styles %}
+
 {% block body %}
-    <h1>Home</h1>
-    <p>Welcome to the skills page!</p>
+<div class="toggle-container">
+    <button class="toggle-button active-button" id="educationButton">Skills</button>
+    <button class="toggle-button" id="careerButton" onclick="redirectToURL('{% url 'projects' %}')">Projects</button>
+</div>
+<script src="{% static '/js/toggle.js' %}"></script> 
 {% endblock body %}
