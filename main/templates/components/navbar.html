@@ -1,15 +1,16 @@
 {% load static %}
 <header class="text-gray-600 body-font">
-<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+<div class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center">
     <a href="{% url 'home' %}" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-    <img src="{% static 'images/logo.png' %}" alt="logo" class="h-10" />
+    <img src="{% static 'images/main-logo/logo.png' %}" alt="logo" class="h-10" />
     </a>
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-    <a href="{% url 'home' %}" class="mr-5 hover:text-gray-900 nav-link">Home</a>
-    <a href="{% url 'about' %}" class="mr-5 hover:text-gray-900 nav-link">About</a>
-    <a href="{% url 'projects' %}" class="mr-5 hover:text-gray-900 nav-link">Projects</a>
-    <a href="{% url 'services' %}" class="mr-5 hover:text-gray-900 nav-link">Services</a>
-    <a href="{% url 'socials' %}" class="mr-5 hover:text-gray-900 nav-link">Socials</a>
+    <a href="{% url 'home' %}" class="mr-5 nav-link {% if active_tab == 'home' %}nav-active{% endif %}">Home</a>
+    <a href="{% url 'career' %}" class="mr-5 nav-link {% if active_tab == 'career' %}nav-active{% endif %}">Career Highlights</a>
+    <a href="{% url 'about' %}" class="mr-5 nav-link {% if active_tab == 'about' %}nav-active{% endif %}">About</a>
+    <a href="{% url 'projects' %}" class="mr-5 nav-link {% if active_tab == 'projects' %}nav-active{% endif %}">Projects</a>
+    <a href="{% url 'services' %}" class="mr-5 nav-link {% if active_tab == 'services' %}nav-active{% endif %}">Services</a>
+    <a href="{% url 'socials' %}" class="mr-5 nav-link {% if active_tab == 'socials' %}nav-active{% endif %}">Socials</a>
     </nav>
     <button class="inline-flex items-center bg-black border-0 py-1 px-3 focus:outline-none hover:bg-white rounded text-base mt-4 md:mt-0 contact-link"><a href="{% url 'contact' %}">Contact Me</a>
     <svg fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
