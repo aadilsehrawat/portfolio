@@ -18,7 +18,7 @@ body{
     padding: 10px 50px;
     position: relative;
     width: 50%;
-    animation: movedown 1s linear forwards;
+    animation: movedown 1s ease-out forwards;
     opacity: 0;
 }
 .company-name{
@@ -27,13 +27,10 @@ body{
 .link-logo{
     margin: 8px 0 0 8px;
     width: 20px;
-    /* height: 40px; */
-    /* border-radius: 50%; */
-    /* background: white; */
 }
 @keyframes movedown{
     0%{
-        opacity: 1;
+        opacity: 0;
         transform: translateY(-30px);
     }
     100%{
@@ -107,6 +104,9 @@ body{
 }
 .job-title{
     font-weight: 700;
+}
+.tasks{
+    list-style: disc;
 }
 .text-box h2{
     font-size: 20px;
