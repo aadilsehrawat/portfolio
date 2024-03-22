@@ -2,68 +2,6 @@ body{
     background: black;
 }
 
-.toggle-container{
-    width: fit-content;
-    margin: 20px auto;
-}
-@media screen and (max-width: 600px){
-    .toggle-container{
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-    }
-}
-.toggle-button{
-    position: relative;
-    display: inline-block;
-    padding: 12px 36px;
-    margin: 10px;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 18px;
-    letter-spacing: 2px;
-    border-radius: 40px;
-    /* background: linear-gradient(90deg, #0162c8, #55e7fc); */
-    background: linear-gradient(90deg, #ff72c0, #755bea);
-    overflow: hidden;
-    transition: transform 0.1s ease;
-}
-ripple{
-    position: absolute;
-    background: #fff;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    border-radius: 50%;
-    animation: animate 1s linear infinite;
-}
-@keyframes animate {
-    0% {
-        width: 0px;
-        height: 0px;
-        opacity: 0.5;
-    }
-    100% {
-        width: 500px;
-        height: 500px;
-        opacity: 0;
-    }
-}
-.toggle-button:nth-child(2) {
-    background: linear-gradient(90deg, #755bea, #ff72c0);
-}
-.toggle-button:hover {
-    background-color: #ddd;
-    transform: scale(1.05);
-}
-.active-button {
-    color: white;
-    /* box-shadow: #755bea 0px 0px 10px 0px; */
-    box-shadow: 0px 0px 15px rgb(255, 255, 255);
-}
-
-
 .heading1{
     font-family: sans-serif;
     margin-top: 30px;
