@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Project{% endblock title %}
+
+{% block styles %}<link rel="stylesheet" href="{% static 'css/career.css' %}">{% endblock styles %}
+
+{% block body %}
+<p class="heading1">My Educational History</p>
+<div class="timeline">
+    {% comment %} First Card {% endcomment %}
+    <div class="institute-company-container right-container">
+        <a href="https://golayaschool.org/" target="_blank"><img class="institute-company-logo" src="{% static 'images/career/institution-logos/amity.png' %}" /></a>
+        <div class="text-box">
+            <div class="institute-company-name">
+                <h2>Amity University, Noida</h2>
+                <a href="https://golayaschool.org/" target="_blank"><img class="link-logo" src="{% static 'images/attributes/link.png' %}" /></a>
+            </div>
+            <small>2019 - 2023</small>
+            <p class="inner-heading">B.Tech (Computer Science & Engineering)</p>
+            <p>Courses/Subjects:</p>
+            <ul class="ml-5 tasks">
+                <li>DSA (Data Structures and Algorithms)</li>
+                <li>Software Engineering</li>
+                <li>Database Management</li>
+                <li>Operating Systems</li>
+                <li>Artificial Intelligence</li>
+                <li>Natural Language Processing</li>
+                <li>Computer Networks</li>
+            </ul>
+            <span class="right-container-arrow"></span>    
+        </div>
+    </div>
+    {% comment %} Second Card {% endcomment %}
+    <div class="institute-company-container left-container">
+        <a href="https://www.ngfsalaknanda.com/" target="_blank"><img class="institute-company-logo" src="{% static 'images/career/institution-logos/ngfs.png' %}" /></a>
+        <div class="text-box">
+            <div class="institute-company-name">
+                <h2>New Green Field School, New Delhi</h2>
+                <a href="https://www.ngfsalaknanda.com/" target="_blank"><img class="link-logo" src="{% static 'images/attributes/link.png' %}" /></a>
+            </div>
+            <small>2018 - 2016</small>
+            <p class="inner-heading">12th Grade</p>
+            <p>Courses/Subjects:</p>
+            <ul class="ml-5 tasks">
+                <li>Computer Science.</li>
+                <li>Non-Medical(Physics, Chemistry and Mathematics).</li>
+            </ul>
+            <span class="left-container-arrow"></span>
+        </div>
+    </div>
+    {% comment %} Third Card {% endcomment %}
+    <div class="institute-company-container right-container">
+        <a href="https://golayaschool.org/" target="_blank"><img class="institute-company-logo" src="{% static 'images/career/institution-logos/golaya.png' %}" /></a>
+        <div class="text-box">
+            <div class="institute-company-name">
+                <h2>Golaya Progressive Public School, Palwal</h2>
+                <a href="https://golayaschool.org/" target="_blank"><img class="link-logo" src="{% static 'images/attributes/link.png' %}" /></a>
+            </div>
+            <small>2014-2016</small>
+            <p class="inner-heading">Full Stack Developer</p>
+            <p>Courses/Subjects:</p>
+            <ul class="ml-5 tasks">
+                <li>Mathematics.</li>
+                <li>Computer Fundamentals.</li>
+                <li>Science(Physics, Chemistry, Biology).</li>
+            </ul>
+            <span class="right-container-arrow"></span>
+        </div>
+    </div>
+</div>
+{% endblock body %}
