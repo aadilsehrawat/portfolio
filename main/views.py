@@ -4,14 +4,16 @@ from django.shortcuts import render, redirect
 def index(request):
     return redirect('home')
 def home(request):
-    return render(request, 'main/home.html')
+    return render(request, 'main/home.html', {'active_tab': 'home'})
+def career(request):
+    return render(request, 'main/career.html', {'active_tab': 'career'})
 def about(request):
-    return render(request, 'main/about.html')
+    return render(request, 'main/about.html', {'active_tab': 'about'})
 def projects(request):
-    return render(request, 'main/projects.html')
+    return render(request, 'main/projects.html', {'active_tab': 'projects'})
 def services(request):
-    return render(request, 'main/services.html')
+    return render(request, 'main/services.html', {'active_tab': 'services'})
 def contact(request):
-    return render(request, 'main/contact.html')
+    return render(request, 'main/contact.html', {'active_tab': 'contact'})
 def socials(request):
-    return render(request, 'main/socials.html')
+    return render(request, 'main/socials.html', {'active_tab': 'socials'})
