@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from .helper import *
 
 # Create your views here.
 def index(request):
@@ -24,4 +25,38 @@ def services(request):
 def contact(request):
     return render(request, 'main/contact.html', {'active_tab': 'contact'})
 def socials(request):
-    return render(request, 'main/socials.html', {'active_tab': 'socials'})
+    socials = [
+        {
+            'name': 'LinkedIn',
+            'url': 'https://www.linkedin.com/in/aadilsehrawat/',
+        },
+        {
+            'name': 'GitHub',
+            'url': 'https://www.github.com/aadilsehrawat/',
+        },
+        {
+            'name': 'Instagram',
+            'url': 'https://www.instagram.com/aadilsehrawat/',
+        },
+        {
+            'name': 'Facebook',
+            'url': 'https://www.facebook.com/aadilsehrawat/',
+        },
+        {
+            'name': 'Twitter',
+            'url': 'https://www.twitter.com/aadilsehrawat/',
+        },
+        {
+            'name': 'LeetCode',
+            'url': 'https://www.leetcode.com/aadilsehrawat/',
+        },
+    ]
+    context = {
+        'active_tab': 'socials',
+        'socials': socials,
+    }
+    if ('LeetCode' in [social['name'] for social in socials]):
+        leetcode_data = get_leetcode_data()
+        if leetcode_data:
+            context['leetcode_data'] = leetcode_data
+    return render(request, 'main/socials.html', context)
