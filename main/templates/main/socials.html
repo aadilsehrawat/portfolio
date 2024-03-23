@@ -1,19 +1,41 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Socials{% endblock title %}
 
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/cards.css' %}">
+{% endblock styles %}
+
 {% block body %}
-    <h1>Home</h1>
-    <p>Welcome to the socials page!</p>
-    {% for social in socials %}
+    {% comment %} <h1>Home</h1> {% endcomment %}
+    {% comment %} <p>Welcome to the socials page!</p> {% endcomment %}
+    {% comment %} {% for social in socials %}
         <h2><a href={{ social.url }}>{{ social.name }}</a></h2>
-    {% endfor %}
+    {% endfor %} {% endcomment %}
     
-    {% if leetcode_data %}
+    {% comment %} {% if leetcode_data %}
     <h2>Leetcode</h2>
     <p>Total Problems solved: {{ leetcode_data.totalSolved }}</p>
     <p>Total Easy Problems solved: {{ leetcode_data.easySolved }}</p>
     <p>Total Medium Problems solved: {{ leetcode_data.mediumSolved }}</p>
     <p>Total Hard Problems solved: {{ leetcode_data.hardSolved }}</p>
-    {% endif %}
+    {% endif %} {% endcomment %}
+
+<div class="cards-wrapper">
+    <div class="cards-container">
+        {% for social in socials %}
+        <input type="radio" name="slide" id="c{{ social.id }}" checked>
+        <label for="c{{ social.id }}" class="card" style="background-image: url('{% static social.social_image_url %}')">
+            <div class="row">
+                <div class="icon">{{ social.id }}</div>
+                <div class="description">
+                    <h4><a href={{ social.url }}>{{ social.name }}</a></h4>
+                    <p>Some random text here</p>
+                    </div>
+                </div>
+            </label>
+        {% endfor %}
+    </div>
+</div>
 {% endblock body %}
