@@ -5,4 +5,15 @@
 {% block body %}
     <h1>Home</h1>
     <p>Welcome to the socials page!</p>
+    {% for social in socials %}
+        <h2><a href={{ social.url }}>{{ social.name }}</a></h2>
+    {% endfor %}
+    
+    {% if leetcode_data %}
+    <h2>Leetcode</h2>
+    <p>Total Problems solved: {{ leetcode_data.totalSolved }}</p>
+    <p>Total Easy Problems solved: {{ leetcode_data.easySolved }}</p>
+    <p>Total Medium Problems solved: {{ leetcode_data.mediumSolved }}</p>
+    <p>Total Hard Problems solved: {{ leetcode_data.hardSolved }}</p>
+    {% endif %}
 {% endblock body %}
