@@ -27,36 +27,48 @@ def contact(request):
 def socials(request):
     socials = [
         {
+            'id': 1,
             'name': 'LinkedIn',
             'url': 'https://www.linkedin.com/in/aadilsehrawat/',
+            'social_image_url': 'images/socials/black-on-white/linkedin.png'
         },
         {
+            'id': 2,
             'name': 'GitHub',
             'url': 'https://www.github.com/aadilsehrawat/',
+            'social_image_url': 'images/socials/black-on-white/github.png'
         },
         {
+            'id': 3,
             'name': 'Instagram',
             'url': 'https://www.instagram.com/aadilsehrawat/',
+            'social_image_url': 'images/socials/black-on-white/instagram.png'
         },
         {
+            'id': 4,
             'name': 'Facebook',
             'url': 'https://www.facebook.com/aadilsehrawat/',
+            'social_image_url': 'images/socials/black-on-white/facebook.png'
         },
         {
-            'name': 'Twitter',
-            'url': 'https://www.twitter.com/aadilsehrawat/',
-        },
-        {
+            'id': 5,
             'name': 'LeetCode',
             'url': 'https://www.leetcode.com/aadilsehrawat/',
+            'social_image_url': 'images/socials/black-on-white/leetcode.png'
+        },
+        {
+            'id': 6,
+            'name': 'Twitter',
+            'url': 'https://www.twitter.com/aadilsehrawat/',
+            'social_image_url': 'images/socials/black-on-white/twitter.png'
         },
     ]
     context = {
         'active_tab': 'socials',
         'socials': socials,
     }
-    if ('LeetCode' in [social['name'] for social in socials]):
-        leetcode_data = get_leetcode_data()
-        if leetcode_data:
-            context['leetcode_data'] = leetcode_data
+    # if ('LeetCode' in [social['name'] for social in socials]):
+        # leetcode_data = get_leetcode_data()
+        # if leetcode_data:
+            # context['leetcode_data'] = leetcode_data
     return render(request, 'main/socials.html', context)
