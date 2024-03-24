@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Home{% endblock title %}
 
@@ -8,18 +9,24 @@
             background-color: black;
         }
         .heading1{
-            font-family: sans-serif;
-            margin-top: 10px;
-            color: #2b9900;
-            font-size: 2rem;
-            font-weight: 600;
-            text-align: center;
+            font: 2rem "Roboto", sans-serif;
+            margin-top: 2rem;
+            color: white;
+            font-size: 3rem;
+            font-weight: 900;
+        }
+        #avatar{
+            width: 50%;
+            margin: 0 auto;
         }
     </style>
 {% endblock styles %}
 
 {% block body %}
-    <h1 class='heading1' style='text-center'>Building Innovative Solutions throuh Technology for a better tomorrow.</h1>
+    <h2 class="heading1 text-center">Building Innovative Solutions through Technology</h2>
+    <div class="mb-24">
+        <img id="avatar" src="{% static 'images/attributes/avatar1-white.png' %}" alt="About" class="about-image">
+    </div>
     {% include "main/home-components/home-about.html" %}
     {% include "main/home-components/home-projects.html" %}
     {% include "main/home-components/home-services.html" %}

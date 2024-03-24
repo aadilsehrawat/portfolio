@@ -2,35 +2,151 @@
 {% load static %}
 
 {% block title %}About{% endblock title %}
-{% block styles %}<link rel="stylesheet" href="{% static 'css/about.css' %}">{% endblock styles %}
-
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/main/about.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: black;
+            {% comment %} background: radial-gradient(at top left, #2270E2, #FFFFFF); {% endcomment %}
+        }
+        .heading1{
+            font: 2rem "Roboto", sans-serif;
+            margin-top: 2rem;
+            color: white;
+            font-size: 3rem;
+            font-weight: 900;
+        }
+        .heading2{
+            margin-top: 2rem;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 900;
+            cursor: pointer;
+            color: #2270E2;
+        }
+        .heading2:hover{
+            text-decoration: underline;
+        }
+        .roboto-medium {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+        .main-wrapper{
+            width: 70%;
+            margin: 0 auto;
+        }
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 4rem 6rem;
+        }
+        .wrapper-second{
+            flex-direction: row-reverse;
+        }
+        #avatar{
+            width: 40%;
+        }
+        .right-col{
+            width: 47%;
+        }
+        .description{
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .description-points{
+            color: white;
+        }
+        .hr {
+            margin-top: 1rem;
+            height: 2px;  
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        #vision-des, #mission-des {
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: opacity 0.5s ease, height 0.5s ease;
+        }
+        #vision-des.show, #mission-des.show {
+            opacity: 1;
+            height: auto;
+        }
+    </style>
+{% endblock styles %}
 
 {% block body %}
-    <h1>Home</h1>
-    <p>Welcome to the about page!</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <ul>
-        <li>Education</li>
-        <li>Projects</li>
-        <li>Skills</li>
-    </ul>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    {% comment %} <iframe src="{% static 'resume.pdf' %}" width="100%" height="600px" frameborder="0"></iframe> {% endcomment %}
-    <button id="openModalBtn">Open PDF Viewer</button>
+<h2 class="heading1 text-center">Creating Digital Solutions for a Better Tomorrow</h2>
+<div class="main-wrapper">
+    <div class="wrapper">
+        <img id="avatar" src="{% static 'images/attributes/avatar2-white.png' %}" alt="About" class="about-image">
+        <div class="right-col">
+            <h2 class="heading1">Building Solutions with Technology</h2>
+            <p class="description">As a software developer, my goal is to create digital solutions that help businesses and individuals achieve their goals. 
+                My expertise lies in full stack development using React and Django, ensuring that the final product is scalable, efficient, and user-friendly.
+            </p>
+            <h3 id="vision" class="heading2">My Vision</h3>
+            <p id="vision-des" class="description">My vision is to use technology to create solutions that make life easier for people.</p>
+            <div class="hr"></div>
+            
+            <h3 id="mission" class="heading2">My Mission</h3>
+            <p id="mission-des" class="description">My mission is to deliver innovative digital solutions that leverage technology to improve lives through intuitive design, efficient development, and seamless functionality.</p>
+            <div class="hr"></div>
+        </div>
+    </div>
+</div>
+<div class="main-wrapper">
+    <div class="wrapper wrapper-second">
+        <img id="avatar" src="{% static 'images/attributes/avatar3-white.png' %}" alt="About" class="about-image">
+        <div class="right-col">
+            <h2 class="heading1">Let's Build Something Great Together</h2>
+            <p class="description">If you have a project in mind or would like to learn more about my services, please don’t hesitate to contact me. 
+                I’m always open for a conversation to help clarify your needs and explore how my skills can bring your ideas to life.
+            </p>
+            <div>
+                <p class="description description-points">&check; Explore customized solutions for your unique needs</p>
+                <p class="description description-points">&check; Get insights into the latest technology and development trends</p>
+                <p class="description description-points">&check; Understand how my skills can complement your vision</p>
+            </div>
+            <div id="pdfModal" class="modal">
+                <div class="modal-content">
+                    <span class="close text-center">&times;</span>
+                    <iframe id="pdfIframe" src="{% static 'resume.pdf' %}" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+            </div>
+            <h3 id="openModalBtn" class="heading2">My Resume</h3>
+        </div>
+    </div>
+</div>
 
+
+    {% comment %} <button id="openModalBtn">Open PDF Viewer</button>
+            <iframe src="{% static 'resume.pdf' %}" width="100%" height="600px" frameborder="0"></iframe>
     <div id="pdfModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <iframe id="pdfIframe" src="{% static 'resume.pdf' %}" frameborder="0"></iframe>
-    </div>
-    </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="pdfIframe" src="{% static 'resume.pdf' %}" frameborder="0"></iframe>
+        </div>
+    </div> {% endcomment %}
     <script src="{% static 'js/about.js' %}"></script>
+    <script>
+        const visionButton = document.getElementById('vision');
+        const visionDes = document.getElementById('vision-des');
+        visionButton.addEventListener('click', function() {
+            visionDes.classList.toggle('show');
+        });
+
+        const missionButton = document.getElementById('mission');
+        const missionDes = document.getElementById('mission-des');
+        missionButton.addEventListener('click', function() {
+            missionDes.classList.toggle('show');
+        });
+    </script>
+    
 {% endblock body %}
