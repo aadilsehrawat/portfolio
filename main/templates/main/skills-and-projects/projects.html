@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="{% static 'css/education-and-workX.css' %}">
 <link rel="stylesheet" href="{% static 'css/toggle.css' %}">
 <link rel="stylesheet" href="{% static 'css/cards.css' %}">
+<link rel="stylesheet" href="{% static 'css/project-cards.css' %}">
 {% endblock styles %}
 
 {% block body %}
@@ -14,13 +15,13 @@
     <button class="toggle-button" id="educationButton" onclick="redirectToURL('{% url 'skills' %}')">Skills</button>
     <button class="toggle-button active-button" id="careerButton">Projects</button>
 </div>
-<div class="cards-wrapper">
+{% comment %} <div class="cards-wrapper">
     <div class="cards-container">
         {% for project in projects %}
         <input type="radio" name="slide" id="c{{ project.id }}" {% if forloop.first %}checked{% endif %}>
-        <label for="c{{ project.id }}" class="card">
+        <label for="c{{ project.id }}" class="card"> {% endcomment %}
             {% comment %} style="background-image: url('{% static project.project_image_url %}')"> {% endcomment %}
-            <div class="row">
+            {% comment %} <div class="row">
                 <div class="icon">{{ project.id }}</div>
                 <div class="description">
                     <h4><a href={{ project.url }} target="_blank">{{ project.name }}</a></h4>
@@ -29,6 +30,58 @@
                 </div>
             </label>
         {% endfor %}
+    </div>
+</div> {% endcomment %}
+<div class="mt-5 ml-60">
+    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Featured</h1>
+    <div class="h-1 w-20 bg-white rounded"></div>
+</div>
+<div class="container">
+    <div class="card__container">
+        <article class="card__article">
+            <img src="{% static 'images/landscape-1.png' %}" alt="image" class="card__img">
+            <div class="card__data">
+                <span class="card__description">Vancouver Mountains, Canada</span>
+                <h2 class="card__title">The Great Path</h2>
+                <a href="#" class="card__button">Read More</a>
+            </div>
+        </article>
+
+        <article class="card__article">
+            <img src="{% static 'images/landscape-2.png' %}" alt="image" class="card__img">
+            <div class="card__data">
+                <span class="card__description">Poon Hill, Nepal</span>
+                <h2 class="card__title">Starry Night</h2>
+                <a href="#" class="card__button">Read More</a>
+            </div>
+        </article>
+
+        <article class="card__article">
+            <img src="{% static 'images/landscape-3.png' %}" alt="image" class="card__img">
+            <div class="card__data">
+                <span class="card__description">Bojcin Forest, Serbia</span>
+                <h2 class="card__title">Path Of Peace</h2>
+                <a href="#" class="card__button">Read More</a>
+            </div>
+        </article>
+
+        <article class="card__article">
+            <img src="{% static 'images/landscape-3.png' %}" alt="image" class="card__img">
+            <div class="card__data">
+                <span class="card__description">Bojcin Forest, Serbia</span>
+                <h2 class="card__title">Path Of Peace</h2>
+                <a href="#" class="card__button">Read More</a>
+            </div>
+        </article>
+
+        <article class="card__article">
+            <img src="{% static 'images/landscape-3.png' %}" alt="image" class="card__img">
+            <div class="card__data">
+                <span class="card__description">Bojcin Forest, Serbia</span>
+                <h2 class="card__title">Path Of Peace</h2>
+                <a href="#" class="card__button">Read More</a>
+            </div>
+        </article>
     </div>
 </div>
 <script src="{% static '/js/toggle.js' %}"></script> 
