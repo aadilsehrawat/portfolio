@@ -6,12 +6,30 @@
 {% block styles %}
 <link rel="stylesheet" href="{% static 'css/education-and-workX.css' %}">
 <link rel="stylesheet" href="{% static 'css/toggle.css' %}">
+<link rel="stylesheet" href="{% static 'css/cards.css' %}">
 {% endblock styles %}
 
 {% block body %}
 <div class="toggle-container">
     <button class="toggle-button" id="educationButton" onclick="redirectToURL('{% url 'skills' %}')">Skills</button>
     <button class="toggle-button active-button" id="careerButton">Projects</button>
+</div>
+<div class="cards-wrapper">
+    <div class="cards-container">
+        {% for project in projects %}
+        <input type="radio" name="slide" id="c{{ project.id }}" {% if forloop.first %}checked{% endif %}>
+        <label for="c{{ project.id }}" class="card">
+            {% comment %} style="background-image: url('{% static project.project_image_url %}')"> {% endcomment %}
+            <div class="row">
+                <div class="icon">{{ project.id }}</div>
+                <div class="description">
+                    <h4><a href={{ project.url }} target="_blank">{{ project.name }}</a></h4>
+                    <p><a href={{ project.url }} target="_blank">Click to visit</a></p>
+                    </div>
+                </div>
+            </label>
+        {% endfor %}
+    </div>
 </div>
 <script src="{% static '/js/toggle.js' %}"></script> 
 {% endblock body %}

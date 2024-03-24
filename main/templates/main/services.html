@@ -1,8 +1,26 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Services{% endblock title %}
 
+{% block styles %}<link rel="stylesheet" href="{% static 'css/cards.css' %}">{% endblock styles %}
+
 {% block body %}
-    <h1>Home</h1>
-    <p>Welcome to the services page!</p>
+<div class="cards-wrapper">
+    <div class="cards-container">
+        {% for service in services %}
+        <input type="radio" name="slide" id="c{{ service.id }}" {% if forloop.first %}checked{% endif %}>
+        <label for="c{{ service.id }}" class="card">
+            {% comment %} style="background-image: url('{% static service.service_image_url %}')"> {% endcomment %}
+            <div class="row">
+                <div class="icon">{{ service.id }}</div>
+                <div class="description">
+                    <h4><a href={{ service.url }} target="_blank">{{ service.name }}</a></h4>
+                    <p><a href={{ service.url }} target="_blank">Click to visit</a></p>
+                    </div>
+                </div>
+            </label>
+        {% endfor %}
+    </div>
+</div>
 {% endblock body %}
