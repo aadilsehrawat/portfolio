@@ -23,11 +23,11 @@
 <div class="cards-wrapper">
     <div class="cards-container">
         {% for social in socials %}
-        <input type="radio" name="slide" id="c{{ social.id }}" {% if forloop.first %}checked{% endif %}>
-        <label for="c{{ social.id }}" class="card">
+        <input type="radio" name="slide" id="c{{ social.position }}" {% if forloop.first %}checked{% endif %}>
+        <label for="c{{ social.position }}" class="card">
             {% comment %} style="background-image: url('{% static social.social_image_url %}')"> {% endcomment %}
             <div class="row">
-                <div class="icon">{{ social.id }}</div>
+                <div class="icon">{{ social.position }}</div>
                 <div class="description">
                     <h4><a href={{ social.url }} target="_blank">{{ social.name }}</a></h4>
                     <p><a href={{ social.url }} target="_blank">Click to visit</a></p>

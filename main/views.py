@@ -20,12 +20,16 @@ def skills_and_projects(request):
 def skills(request):
     return render(request, 'main/skills-and-projects/skills.html', {'active_tab': 'skills-projects'})
 def projects(request):
+    for index, item in enumerate(data.projects, start=1):
+        item['position'] = index
     context = {
         'active_tab': 'skills-projects',
         'projects': data.projects,
     }
     return render(request, 'main/skills-and-projects/projects.html', context)
 def services(request):
+    for index, item in enumerate(data.services, start=1):
+        item['position'] = index
     context = {
         'active_tab': 'services',
         'services': data.services,
@@ -34,6 +38,8 @@ def services(request):
 def contact(request):
     return render(request, 'main/contact.html', {'active_tab': 'contact'})
 def socials(request):
+    for index, item in enumerate(data.socials, start=1):
+        item['position'] = index
     context = {
         'active_tab': 'socials',
         'socials': data.socials,
