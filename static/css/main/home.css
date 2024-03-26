@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+}
+
+.text{
+    font: 2rem "Roboto", sans-serif;
+    margin-top: 2rem;
+    color: white;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    opacity: 0;
+    animation: movedown 1s ease-out forwards;
+}
+
+@keyframes movedown{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#avatar{
+    width: 50%;
+    margin: 0 auto;
+}

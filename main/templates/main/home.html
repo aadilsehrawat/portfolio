@@ -4,32 +4,20 @@
 {% block title %}Home{% endblock title %}
 
 {% block styles %}
-    <style>
-        body{
-            background-color: black;
-        }
-        .heading1{
-            font: 2rem "Roboto", sans-serif;
-            margin-top: 2rem;
-            color: white;
-            font-size: 3rem;
-            font-weight: 900;
-        }
-        #avatar{
-            width: 50%;
-            margin: 0 auto;
-        }
-    </style>
+<link rel="stylesheet" href="{% static 'css/main/home.css' %}">
+<link rel="stylesheet" href="{% static 'css/main/home/home-summary.css' %}">
 <link rel="stylesheet" href="{% static 'css/main/home/home-career.css' %}">
 <link rel="stylesheet" href="{% static 'css/main/home/home-skills.css' %}">
 {% endblock styles %}
 
 {% block body %}
-    <h2 class="heading1 text-center">Building Innovative Solutions through Technology</h2>
+    <div class="heading-container">
+        <p class="text">Building Innovative Solutions through Technology!</p>
+    </div>
     <div class="mb-24">
         <img id="avatar" src="{% static 'images/attributes/avatar1-white.png' %}" alt="About" class="about-image">
     </div>
-    {% include "main/home-components/home-about.html" %}
+    {% include "main/home-components/home-summary.html" %}
     {% include "main/home-components/home-career.html" %}
     {% include "main/home-components/home-skills.html" %}
     {% include "main/home-components/home-projects.html" %}
