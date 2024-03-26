@@ -1,17 +1,24 @@
-.category-name-skills-wrapper{
-    margin: 0 15rem 4rem 15rem;
+.main-career-wrapper{
+    display: flex; 
+    justify-content: space-between; 
+    margin: 0 15rem 5rem 15rem;
 }
 
-.category-name, .category-skills-wrapper{
-    margin-top: 1.25rem
+/* .career-wrapper{
+    min-width: 60%;
+} */
+
+.career-title{
+    margin-bottom: 20px;
 }
 
-.category-skills{
+.career-category{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+
 }
-.skill-container{
+
+.career-category-container{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -24,36 +31,44 @@
     transition: transform 0.1s ease;
 }
 
-.skill-container:hover{
-    transform: scale(0.96);
+.career-category-container:hover{
+    transform: scale(0.97);
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.skill-container-inverted{
+.career-category-container-inverted{
+    margin-left: 2rem;
     border: none;
     background-color: rgb(255, 255, 255);
 }
 
-.skill-container-inverted:hover{
+.career-category-container-inverted:hover{
     background-color: rgba(255, 255, 255, 0.2);
-    .all-skills{ 
+    .all-career-category{ 
         color: white;
     }
 }
 
-.skill{
+.career-logo{
+    width: 40px;
+}
+
+.name{ 
     color: white;
     font-size: 1.5rem;
     margin-left: 10px;
 }
 
-.all-skills{
+.detail{
+    color: white;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.all-career-category{
     color: black;
 }
 
-.skill-logo{
-    width: 40px;
-}
 
 @media screen and (max-width: 768px){
     .category-name, .category-skills-wrapper{
