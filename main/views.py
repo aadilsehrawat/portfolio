@@ -18,7 +18,17 @@ def about(request):
 def skills_and_projects(request):
     return redirect('projects')
 def skills(request):
-    return render(request, 'main/skills-and-projects/skills.html', {'active_tab': 'skills-projects'})
+    skills_by_category = {}
+    for skill in data.skills:
+        category = skill['category']
+        if category not in skills_by_category:
+            skills_by_category[category] = []
+        skills_by_category[category].append(skill)
+    context = {
+        'active_tab': 'skills-projects',
+        'skills_by_category': skills_by_category,
+    }
+    return render(request, 'main/skills-and-projects/skills.html', context)
 def projects(request):
     for index, item in enumerate(data.projects, start=1):
         item['position'] = index
