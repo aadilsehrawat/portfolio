@@ -17,10 +17,15 @@
     <div class="mb-24">
         <img id="avatar" src="{% static 'images/attributes/avatar1-white.png' %}" alt="About" class="about-image">
     </div>
+    
     {% include "main/home-components/home-summary.html" %}
-    {% include "main/home-components/home-career.html" %}
-    {% include "main/home-components/home-skills.html" %}
-    {% include "main/home-components/home-projects.html" %}
-    {% include "main/home-components/home-services.html" %}
-    {% include "main/home-components/home-contact.html" %}
+    <div class="custom-hidden">
+        {% include "main/home-components/home-career.html" %}
+        {% include "main/home-components/home-skills.html" %}
+    </div>
+    <div class="custom-hidden">{% include "main/home-components/home-projects.html" %}</div>
+    <div class="custom-hidden">{% include "main/home-components/home-services.html" %}</div>
+    <div class="custom-hidden">{% include "main/home-components/home-contact.html" %}</div>
+
+    <script src="{% static '/js/home.js' %}"></script>
 {% endblock body %}
