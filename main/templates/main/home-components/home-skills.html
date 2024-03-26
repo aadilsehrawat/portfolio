@@ -1,0 +1,20 @@
+{% load static %}
+<div class="category-name-skills-wrapper">
+    <div class="category-name">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Featured Skills</h1>
+        <div class="h-1 w-20 bg-white rounded"></div>
+    </div>
+    <div class="category-skills-wrapper">
+        <div class="category-skills">
+            {% for skill in skills %}
+            <a href="{{skill.url}}" target="_blank" class="skill-container">
+                <img class="skill-logo" src="{% static skill.skill_image_url %}" />
+                <p class="skill">{{ skill.name }}</p>
+            </a>
+            {% endfor %}
+            <a href="{% url 'skills' %}" target="_blank" class="skill-container skill-container-inverted">
+                <p class="skill all-skills">Click Here To View All Skills</p>
+            </a>
+        </div>
+    </div>
+</div>
