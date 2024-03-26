@@ -20,6 +20,7 @@
             margin: 0 auto;
         }
     </style>
+<link rel="stylesheet" href="{% static 'css/main/home/home-career.css' %}">
 <link rel="stylesheet" href="{% static 'css/main/home/home-skills.css' %}">
 {% endblock styles %}
 
@@ -29,6 +30,7 @@
         <img id="avatar" src="{% static 'images/attributes/avatar1-white.png' %}" alt="About" class="about-image">
     </div>
     {% include "main/home-components/home-about.html" %}
+    {% include "main/home-components/home-career.html" %}
     {% include "main/home-components/home-skills.html" %}
     {% include "main/home-components/home-projects.html" %}
     {% include "main/home-components/home-services.html" %}

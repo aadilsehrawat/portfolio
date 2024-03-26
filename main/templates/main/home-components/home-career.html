@@ -1,0 +1,46 @@
+{% load static %}
+{% comment %} LATEST EDUCATION {% endcomment %}
+<div class="main-career-wrapper">
+    <div class="career-wrapper">
+        <div class="career-title">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Education</h1>
+            <div class="h-1 w-20 bg-white rounded"></div>
+        </div>
+        <div class="career-category">
+            {% for education in latest_education %}
+            <a href="{{education.website}}" target="_blank" class="career-category-container">
+                <img class="career-logo" src="{% static education.image_url %}" />
+                <span style="display: flex; flex-direction: column">
+                    <p class="name">{{ education.course }}</p>
+                    <p class="detail">{{ education.degree }}, {{education.university}} ({{education.duration}})</p>
+                </span>
+            </a>
+            <a href="{% url 'education' %}" target="_blank" class="career-category-container career-category-container-inverted">
+                <p class="name all-career-category">View All</p>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% comment %} LATEST WORK EXPERIENCE {% endcomment %}
+    <div class="career-wrapper">
+        <div class="career-title">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Work Profile</h1>
+            <div class="h-1 w-20 bg-white rounded"></div>
+        </div>
+        <div class="career-category">
+            {% for experience in latest_experience %}
+            <a href="{{experience.website}}" target="_blank" class="career-category-container">
+                <img class="career-logo" src="{% static experience.image_url %}" />
+                <span style="display: flex; flex-direction: column">
+                    <p class="name">{{ experience.title }}</p>
+                    <p class="detail">{{ experience.company }} ({{experience.duration}})</p>
+                </span>
+            </a>
+            <a href="{% url 'workX' %}" target="_blank" class="career-category-container career-category-container-inverted">
+                <p class="name all-career-category">View All</p>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
