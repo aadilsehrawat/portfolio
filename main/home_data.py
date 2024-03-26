@@ -1,0 +1,27 @@
+featured_skills=[
+    {'id':1,
+    'name':'Python',
+    'url':'https://www.python.org/',
+    'skill_image_url':'images/skills-and-projects/skills/python.png'
+    },
+    {'id':2,
+    'name':'Vue JS',
+    'url':'https://vuejs.org/',
+    'skill_image_url':'images/skills-and-projects/skills/vue.png'
+    },
+    {'id':3,
+    'name':'Django',
+    'url':'https://www.djangoproject.com/',
+    'skill_image_url':'images/skills-and-projects/skills/django.png'
+    },
+    {'id':4,
+    'name':'Git',
+    'url':'https://git-scm.com/',
+    'skill_image_url':'images/skills-and-projects/skills/git.png'
+    },
+    {'id':5,
+    'name':'Vercel',
+    'url':'https://vercel.com/',
+    'skill_image_url':'images/skills-and-projects/skills/vercel.png'
+    },
+]

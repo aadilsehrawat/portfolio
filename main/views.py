@@ -1,12 +1,16 @@
 from django.shortcuts import render, redirect
 from .helper import *
-from . import data
+from . import data, home_data
 
 # Create your views here.
 def index(request):
     return redirect('home')
 def home(request):
-    return render(request, 'main/home.html', {'active_tab': 'home'})
+    context={
+        'active_tab': 'home',
+        'skills': home_data.featured_skills,
+    }
+    return render(request, 'main/home.html', context)
 def career(request):
     return redirect('workX')
 def education(request):
