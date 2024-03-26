@@ -9,6 +9,8 @@ def home(request):
     context={
         'active_tab': 'home',
         'skills': home_data.featured_skills,
+        'latest_education': home_data.latest_education,
+        'latest_experience': home_data.latest_experience,
     }
     return render(request, 'main/home.html', context)
 def career(request):

@@ -25,3 +25,24 @@ featured_skills=[
     'skill_image_url':'images/skills-and-projects/skills/vercel.png'
     },
 ]
+
+latest_education=[
+    {
+    'degree':'Bachelor of Technology',
+    'course':'Computer Science and Engineering',
+    'university':'Amity University',
+    'duration':'2019-2023',
+    'image_url':'images/career/institution-logos/amity-transparent.png',
+    'website':'https://www.amity.edu/'
+    }
+]
+
+latest_experience=[
+    {
+    'title':'SDE-1',
+    'company':'Prospeer',
+    'duration':'March 2024 - Present',
+    'image_url':'images/career/company-logos/prospeer-transparent.png',
+    'website':'https://www.prospeer.ai/'
+    }
+]
