@@ -3,86 +3,13 @@
 
 {% block title %}About{% endblock title %}
 {% block styles %}
-<link rel="stylesheet" href="{% static 'css/main/about.css' %}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <style>
-        body{
-            background-color: black;
-            {% comment %} background: radial-gradient(at top left, #2270E2, #FFFFFF); {% endcomment %}
-        }
-        .heading1{
-            font: 2rem "Roboto", sans-serif;
-            margin-top: 2rem;
-            color: white;
-            font-size: 3rem;
-            font-weight: 900;
-        }
-        .heading2{
-            margin-top: 2rem;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 900;
-            cursor: pointer;
-            color: #2270E2;
-        }
-        .heading2:hover{
-            text-decoration: underline;
-        }
-        .roboto-medium {
-            font-family: "Roboto", sans-serif;
-            font-weight: 500;
-            font-style: normal;
-        }
-        .main-wrapper{
-            width: 70%;
-            margin: 0 auto;
-        }
-        .wrapper{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 4rem 6rem;
-        }
-        .wrapper-second{
-            flex-direction: row-reverse;
-        }
-        #avatar{
-            width: 40%;
-        }
-        .right-col{
-            width: 47%;
-        }
-        .description{
-            margin-top: 1rem;
-            font-size: 1rem;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.5);
-        }
-        .description-points{
-            color: white;
-        }
-        .hr {
-            margin-top: 1rem;
-            height: 2px;  
-            background-color: rgba(255, 255, 255, 0.5);
-        }
-        #vision-des, #mission-des {
-            opacity: 0;
-            height: 0;
-            overflow: hidden;
-            transition: opacity 0.5s ease, height 0.5s ease;
-        }
-        #vision-des.show, #mission-des.show {
-            opacity: 1;
-            height: auto;
-        }
-    </style>
+
+<link rel="stylesheet" href="{% static 'css/main/about.css' %}">
 {% endblock styles %}
 
 {% block body %}
-<h2 class="heading1 text-center">Creating Digital Solutions for a Better Tomorrow</h2>
+<h2 class="heading1 text-center">Creating Innovative Solutions for a Better Tomorrow</h2>
 <div class="main-wrapper">
     <div class="wrapper">
         <img id="avatar" src="{% static 'images/attributes/avatar2-white.png' %}" alt="About" class="about-image">
