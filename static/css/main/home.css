@@ -2,21 +2,50 @@ body{
     background-color: black;
 }
 
-.text{
-    font: 2rem "Roboto", sans-serif;
+#main-wrapper{
+    margin-inline: 15rem;
+}
+
+.heading-text{
     margin-top: 2rem;
     color: white;
-    font-size: 3rem;
-    font-weight: 900;
+	font-family: 'Russo One', sans-serif;
+	font-weight: 500;
+    font-size: 5rem;
     text-align: center;
     opacity: 0;
     animation: movedown 1s ease-out forwards;
 }
 
-#avatar{
+.dots-avatar-wrapper{
+    background-color: rgba(255,255,255,0.3);
+    margin-block: 5rem;
+	border: 2px solid white;
+	border-radius:10px 10px 0 0;
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+}
+.dots-wrapper{
+    display: flex;
+	padding: 10px;
+    border-bottom: 2px solid white;
+}
+#dot-1{ background-color:  #FC6058;}
+#dot-2{background-color:  #FEC02F;}
+#dot-3{background-color:  #2ACA3E;}
+.browser-dot{
+    background-color: black;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	margin: 5px;
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+}
+
+.avatar{
+    margin-inline: auto;
+    margin-top: 5rem;
     opacity: 0;
     width: 50%;
-    margin: 0 auto;
     animation: movedown 1s ease-out forwards;
     animation-delay: 0.5s;
 }
