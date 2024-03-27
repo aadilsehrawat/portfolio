@@ -1,5 +1,5 @@
 .summary-wrapper{
-    margin: 0 15rem 4rem 15rem;
+    margin-bottom: 5rem;
 }
 
 .summary-heading{
@@ -7,8 +7,9 @@
 }
 
 .summary-text{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 21px;
     margin-top: 1.5rem;
-    font-size: 1.5rem;
     text-align: justify;
 }
 

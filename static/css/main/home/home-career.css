@@ -1,7 +1,7 @@
 .main-career-wrapper{
     display: flex; 
     justify-content: space-between; 
-    margin: 0 15rem 5rem 15rem;
+    margin-bottom: 5rem;
 }
 
 /* .career-wrapper{
