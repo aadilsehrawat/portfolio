@@ -1,0 +1,32 @@
+.form-labels{
+    color: rgba(255, 255, 255, 1);
+    line-height: 1.75rem;
+    font-size: 1rem;
+}
+
+.form-input-box{
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 0.25rem;
+    line-height: 2rem;
+    margin-bottom: 1.75rem;
+    padding: 0.25rem 0.75rem;
+    color: black;
+    font-weight: 500;
+    outline: none;
+    transition: ease-in-out;
+    transition-duration: 200ms;
+}
+
+.form-input-box:focus{
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid rgb(34 197 94);
+}
+
+.message-box{
+    height: 8rem;
+    padding-top: 0.75rem;
+    line-height: 1.25rem;
+    resize: none;
+}
+
