@@ -1,0 +1,123 @@
+.heading-text{
+    margin-top: 2rem;
+    color: white;
+	font-family: 'Russo One', sans-serif;
+	font-weight: 500;
+    font-size: 5rem;
+    text-align: center;
+    opacity: 0;
+    animation: movedown 1s ease-out forwards;
+}
+
+.dots-avatar-wrapper{
+    background-color: rgba(255,255,255,0.3);
+    margin-block: 5rem;
+	border: 2px solid white;
+	border-radius:10px 10px 0 0;
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+}
+.dots-wrapper{
+    display: flex;
+	padding: 10px;
+    border-bottom: 2px solid white;
+}
+#dot-1{ background-color:  #FC6058;}
+#dot-2{background-color:  #FEC02F;}
+#dot-3{background-color:  #2ACA3E;}
+.browser-dot{
+    background-color: black;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	margin: 5px;
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+}
+
+.left-column{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+}
+.avatar{
+    margin-top: 5rem;
+    opacity: 0;
+    width: 80%;
+    animation: movedown 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.right-column{
+    width: 35%;
+    display: flex;
+	align-items: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#preview-shadow{
+	background-color: rgba(0,0,0,0.3);
+	max-width: 300px;
+	height: 200px;
+	padding-left: 30px;
+	padding-top: 30px;
+    opacity: 0;
+    animation: movedown 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+#preview{
+	width: 300px;
+	border:1.5px solid white;
+	background-color: rgba(255,255,255,0.3);
+	padding:15px;
+	position: relative;
+    top: 10px;
+    left: 5px;
+    opacity: 0;
+    animation: movedown 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+.bio-heading{
+    margin-block: 1rem;
+    color: white;
+	font-family: 'Russo One', sans-serif;
+	font-weight: 500;
+    font-size: 2rem;
+    opacity: 0;
+    animation: movedown 1s ease-out forwards;
+}
+.bio-text{
+    margin-bottom: 30px;
+    color: white;
+	font-family: 'Russo One', sans-serif;
+	font-weight: 500;
+    font-size: 1rem;
+    opacity: 0;
+    animation: movedown 1s ease-out forwards;
+}
+.corner{
+	width:7px;
+	height: 7px;
+	border-radius: 50%;
+	position: absolute;
+}
+.dark-corner{
+    background-color: rgba(0,0,0,0.3);
+}
+.light-corner{
+    border:1.5px solid white;
+    background-color: white;
+}
+#corner-tl{top:-5px;left: -5px}
+#corner-tr{top:-5px;right: -5px}
+#corner-br{bottom:-5px;right: -5px}
+#corner-bl{bottom:-5px;left: -5px}
+
+@keyframes movedown{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
