@@ -39,7 +39,7 @@ latest_education=[
 
 latest_experience=[
     {
-    'title':'SDE-1',
+    'title':'Software Development Engineer',
     'company':'Prospeer',
     'duration':'March 2024 - Present',
     'image_url':'images/career/company-logos/prospeer-transparent.png',
